@@ -17,9 +17,14 @@ else:
         discount_total_price = initial_total_price
         print(f"Price {discount_total_price}")
 
-tips = int(input("Please enter a tips - 10%, 15% or 20%: "))
+tips_option = int(input("Do you wanna to enter a percentage of tips(1) or a fixed amount(2)? Enter 1 or 2: "))
 
-tips_amount =  tips/100 * discount_total_price
+if tips_option == 1:
+    tips = int(input("Please enter tips percentage -10, 15 or 20: "))
+    tips_amount = tips / 100 * discount_total_price
+elif tips_option == 2:
+    tips_amount = float(input("Please enter a tips amount: "))
+
 
 print(f"Tips amount: {tips_amount}")
 print(f"Tips amount + total price:  {tips_amount+discount_total_price}")
