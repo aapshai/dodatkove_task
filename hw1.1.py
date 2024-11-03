@@ -7,8 +7,6 @@ for i in range(number_of_dishes):
         price_of_dishes = float(input(f"Enter a price of a dishes: {i + 1}) "))
         initial_total_price += price_of_dishes
 
-
-
 if initial_total_price > 2000:
        discount_total_price = initial_total_price - (initial_total_price/100 * 10)
        print(f"Price with discount {discount_total_price}")
@@ -23,6 +21,14 @@ tips_amount =  tips/100 * discount_total_price
 
 print(f"Tips amount: {tips_amount}")
 print(f"Tips amount + total price:  {tips_amount+discount_total_price}")
+
+total_sum = tips_amount+discount_total_price
+number_of_people = int(input('How many people are there?'))
+if number_of_people > 0:
+    per_person = total_sum/number_of_people
+    print(f'Everyone has to pay by {per_person}' )
+else:
+    print('Please, enter the number of people!')
 
 
 
